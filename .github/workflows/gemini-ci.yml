@@ -1,4 +1,4 @@
-name: gemini CI
+name: gemini-ci
 
 on:
   push:
