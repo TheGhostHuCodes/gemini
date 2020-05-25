@@ -1,4 +1,4 @@
-.PHONY: black-check, isort-check, lint-check, pytest
+.PHONY: black-check, install, isort-check, lint-check, pytest
 
 PY_TEST_FILES = $(shell find tests -name '*.py')
 PY_FILES = $(shell find gemini -name '*.py')
@@ -17,3 +17,6 @@ pytest:
 
 isort-check:
 	poetry run isort --recursive --settings-path=isort.cfg --check-only
+
+install:
+	poetry install

@@ -22,17 +22,16 @@ jobs:
           pip install poetry
       - name: Install dependencies
         run: |
-          poetry install
+          make install
       - name: Check import order with isort
         run: |
-          poetry run isort --recursive --settings-path=isort.cfg --check-only
+          make isort-check
       - name: Format code check with black
         run: |
-          poetry run black --check .
+          make black-check
       - name: Lint code with pylint
         run: |
-          poetry run pylint --rcfile=.pylintrc $(find gemini -name '*.py')
-          poetry run pylint --rcfile=tests.pylintrc $(find tests -name '*.py')
+          make lint-check
       - name: Test with pytest
         run: |
-          poetry run pytest
+          make pytest
