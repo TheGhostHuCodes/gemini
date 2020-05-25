@@ -2,7 +2,6 @@
 gemini
 ######
 
-.. class:: center
 .. image:: https://img.shields.io/github/workflow/status/TheGhostHuCodes/gemini/gemini-ci/master
     :target: https://github.com/TheGhostHuCodes/gemini/actions?query=workflow%3Agemini-ci+branch%3Amaster
 .. image:: https://img.shields.io/github/license/TheGhostHuCodes/gemini
