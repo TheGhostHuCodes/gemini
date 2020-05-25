@@ -4,8 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Yung-Jin (Joey) Hu <yungjinhu@gmail.com>"]
 
+[tool.poetry.scripts]
+gemini = "gemini.__main__:main"
+
 [tool.poetry.dependencies]
 python = "^3.8"
+click = "^7.1.2"
+loguru = "^0.5.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
