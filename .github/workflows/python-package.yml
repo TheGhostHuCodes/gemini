@@ -1,7 +1,4 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Python package
+name: gemini CI
 
 on:
   push:
@@ -29,6 +26,10 @@ jobs:
       - name: Format code check with black
         run: |
           poetry run black --check .
+      - name: Lint code with pylint
+        run: |
+          poetry run pylint --rcfile=.pylintrc $(find gemini -name '*.py')
+          poetry run pylint --rcfile=tests.pylintrc $(find tests -name '*.py')
       - name: Test with pytest
         run: |
           poetry run pytest
