@@ -32,6 +32,9 @@ jobs:
       - name: Lint code with pylint
         run: |
           make lint-check
+      - name: Type check code with mypy
+        run: |
+          make type-check
       - name: Test with pytest
         run: |
           make pytest
