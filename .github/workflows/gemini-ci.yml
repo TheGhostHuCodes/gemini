@@ -39,9 +39,9 @@ jobs:
         run: |
           make pytest
       - name: Publish master branch package to TestPyPi
-        if: github.event_name == 'push' && github.ref == 'ref/head/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           POETRY_PYPI_TOKEN_TESTPYPI: ${{ secrets.testpypi_gemini_package_publish }}
         run: |
           poetry config repositories.testpypi https://test.pypi.org/legacy/
-          poetry publish -r testpypi
+          poetry publish --build --repository testpypi
