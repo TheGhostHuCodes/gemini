@@ -1,8 +1,16 @@
 [tool.poetry]
 name = "gemini"
 version = "0.1.0"
-description = ""
+description = "A command line tool for finding duplicate files."
 authors = ["Yung-Jin (Joey) Hu <yungjinhu@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.rst"
+repository = "https://github.com/TheGhostHuCodes/gemini"
+classifiers = [
+    "Environment :: Console",
+    "Topic :: Utilities"
+]
+include = ["COPYING"]
 
 [tool.poetry.scripts]
 gemini = "gemini.__main__:main"
